@@ -99,6 +99,16 @@ class ConfigProvider extends Provider {
         $this->ranks->save();
     }
 
+    public function deleteRank(Rank $rank)
+    {
+        foreach ($this->players->getAll() as $id => $rankId) {
+            if ($rankId == $rank->getId()) {
+                $this->players->remove($id);
+            }
+        }
+        $this->ranks->remove($rank->getId());
+    }
+
     public function getField(Rank $rank, string $field) {
         return $this->ranks->get($rank->getId(), null)[$field];
     }

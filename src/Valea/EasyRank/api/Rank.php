@@ -88,6 +88,10 @@ class Rank {
         return self::$provider->getField($this, "nameTagFormat");
     }
 
+    public function delete() {
+        return self::$provider->deleteRank($this);
+    }
+
     public function giveToPlayer(Player $player) {
         self::$provider->setPlayerRank($player, $this);
         $player->setNameTag(

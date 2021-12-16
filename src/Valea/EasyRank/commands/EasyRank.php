@@ -184,6 +184,19 @@ class EasyRank implements CommandExecutor
                                 
                                     break;
                                 }
+                                case "delete": {
+                                    
+                                    if ($rank->getId() === "default") {
+                                        $sender->sendMessage("Cannot delete default rank");
+                                        return false;
+                                    }
+
+                                    $rank->delete();
+
+                                    $sender->sendMessage("Rank " . $rank->getId() . " has been deleted.");
+                            
+                                    break;
+                                }   
                                 default: {
                                     $sender->sendMessage("/er rank <rank id> edit");
                                     $sender->sendMessage("/er rank <rank id> setperm");

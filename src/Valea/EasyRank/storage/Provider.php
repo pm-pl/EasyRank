@@ -25,4 +25,5 @@ abstract class Provider {
 
     abstract public function getField(Rank $rank, string $field);
 
+    abstract public function deleteRank(Rank $rank);
 }
