@@ -1,0 +1,16 @@
+---
+name: EasyRank
+version: 0.0.1
+main: Valea\EasyRank\Main
+api: [4.0.0-BETA11, 4.0.0]
+
+commands:
+  er:
+    description: Manage ranks
+    permission: easyrank.commands.er
+
+permissions:
+  easyrank.commands.er:
+    default: op
+    description: Manage ranks
+...
