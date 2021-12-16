@@ -44,11 +44,6 @@ class Main extends PluginBase{
         if (self::$config->get("format_chat", true)) {
             $this->getServer()->getPluginManager()->registerEvents(new Chat(), $this);
         }
-
-        if (self::$config->get("edit_name_tags", true)) {
-            $this->getScheduler()->scheduleRepeatingTask(new NameTags(), 40);
-        }
-
         
         $this->setProvider(new ConfigProvider());
 

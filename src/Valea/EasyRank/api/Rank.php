@@ -90,7 +90,9 @@ class Rank {
 
     public function giveToPlayer(Player $player) {
         self::$provider->setPlayerRank($player, $this);
-        
+        $player->setNameTag(
+            str_replace("%name%", $player->getDisplayName(), $this->getNameTagFormat())
+        );
     }
 
     public function setDisplayName(string $new) {

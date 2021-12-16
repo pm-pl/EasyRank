@@ -17,5 +17,8 @@ class Join implements Listener
             $rank = Rank::get("default");
             $rank->giveToPlayer($event->getPlayer());
         }
+        $event->getPlayer()->setNameTag(
+            str_replace("%name%", $event->getPlayer()->getDisplayName(), $rank->getNameTagFormat())
+        );
     }
 }
