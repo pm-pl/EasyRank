@@ -37,7 +37,6 @@ class Main extends PluginBase{
         $this->getServer()->getPluginManager()->registerEvents(new Join(), $this);
         
         self::$config = new Config($this->getDataFolder() . "config.yml", Config::YAML, [
-            "storage" => "config",
             "edit_name_tags" => true,
             "format_chat" => true
         ]);

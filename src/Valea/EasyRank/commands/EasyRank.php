@@ -207,7 +207,7 @@ class EasyRank implements CommandExecutor
                         }
                     }
                 } else {
-                    $sender->sendMessage("EasyRank\n/er rank <rank_id>\n/rr rank create <rank_id> <display_name>");
+                    $sender->sendMessage("EasyRank\n/er rank <rank_id>\n/er rank create <rank_id> <display_name>");
                     return false;
                 }
                 break;
