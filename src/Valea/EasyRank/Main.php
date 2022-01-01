@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Valea\EasyRank;
 
 use Valea\EasyRank\storage\Provider;
-use Exception;
 use Valea\EasyRank\api\Rank;
 use Valea\EasyRank\listeners\Join;
 use Valea\EasyRank\listeners\Leave;
@@ -13,7 +12,6 @@ use Valea\EasyRank\storage\providers\ConfigProvider;
 use pocketmine\plugin\PluginBase;
 use Valea\EasyRank\commands\EasyRank;
 use Valea\EasyRank\listeners\Chat;
-use Valea\EasyRank\tasks\NameTags;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 
