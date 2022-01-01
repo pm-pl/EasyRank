@@ -68,6 +68,7 @@ class ConfigProvider extends Provider {
     {
         $this->players->set((string)$player->getUniqueId(), $rank->getId());
         $this->players->save();
+    
     }
 
     private function generateRankFromArray(string $id, array $data) {
