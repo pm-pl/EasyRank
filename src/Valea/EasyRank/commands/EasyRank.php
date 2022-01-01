@@ -23,7 +23,7 @@ class EasyRank implements CommandExecutor
             case "rank": {
                 if (isset($args[1])) {
                     if ($args[1] === "create") {
-                        if (!isset($args[2]) && !isset($args[3])) {
+                        if (!isset($args[2]) || !isset($args[3])) {
                             $sender->sendMessage("EasyRank\n/er rank <rank_id>\n/er rank create <rank_id> <display_name>");
                             return false;
                         }
