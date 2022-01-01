@@ -254,7 +254,7 @@ class EasyRank implements CommandExecutor
                         }
                     } else {
                         $rank = Rank::getPlayerRank($player);
-                        $sender->sendMessage($player->getName() . " is ranked " . $rank->getDisplayName() . " (" . $rank->getId() . "). To edit, use /rr player \"" . $player->getName() . "\" set <rank id>");
+                        $sender->sendMessage($player->getName() . " is ranked " . $rank->getDisplayName() . " (" . $rank->getId() . "). To edit, use /er player \"" . $player->getName() . "\" set <rank id>");
                         return true;
                     }
 
